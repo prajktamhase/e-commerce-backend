@@ -200,23 +200,23 @@ app.patch('/product/:_id', async (req, res) => {
 
     const product = await Commerce.findOne({ _id: _id });
 
-    if (name && name!==product.name) {     
+    if (name ) {     
             product.name=name;
     }
 
-    if (description && description!==product.description) {
+    if (description ) {
         product.description=description;
     }
 
-    if (price && price!==product.price) {
+    if (price ) {
         product.price=price;
     }
 
-    if (imageURI && imageURI!==product.imageURI) {
+    if (imageURI) {
         product.imageURI=imageURI;
     }
 
-    if (brand && brand!==product.brand) {
+    if (brand ) {
         product.brand=brand;
     }
 
